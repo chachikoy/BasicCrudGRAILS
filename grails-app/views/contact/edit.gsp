@@ -25,8 +25,9 @@
             <a class="navbar-brand" href="#">WebSiteName</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/contact/list">View</a></li>
+            <li><a href="/contact/show">View</a></li>
             <li><a href="/contact/create">Create</a></li>
+            <li><a href="/contact/list">Update/Delete</a></li>
 
         </ul>
     </div>

@@ -2,7 +2,8 @@
 <head>
     <title>List of Contacts</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    %{--<meta name="viewport" content="width=device-width, initial-scale=1">--}%
+    <meta name="viewport" content="contact">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,8 +16,9 @@
             <a class="navbar-brand" href="#">WebSiteName</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/contact/show">View</a></li>
+            <li><a href="/contact/show">View</a></li>
             <li><a href="/contact/create">Create</a></li>
+            <li><a href="/contact/list">Update/Delete</a></li>
 
         </ul>
     </div>
@@ -42,9 +44,9 @@
         </tr>
         </thead>
         <tbody>
-        <g:each in="${contact}" var="contact">
+        <g:each in="${contacts}" var="contact">
             <tr>
-
+                %{--can also use "it" if var is not indicated--}%
 
                 <td>${contact.fname}</td>
                 <td>${contact.mname}</td>

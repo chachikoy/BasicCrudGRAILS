@@ -44,7 +44,7 @@ pre {
 
 }
 .navbar-default, .navbar-static-top {
-    background-color: #4D8618;
+    background-color: #101f01;
     border: 0px;
 }
 a.navbar-brand {
@@ -235,7 +235,7 @@ a.navbar-brand {
 
 @media (max-width: 1010px) {
     .event-logo {
-        height: ;
+        height: 50px;
     }
 
 }

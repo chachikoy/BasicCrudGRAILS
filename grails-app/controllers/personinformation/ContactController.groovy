@@ -3,7 +3,7 @@ package personinformation
 class ContactController {
 
     def index = {
-        redirect action: "create"
+        redirect action: "show"
     }
 
     def create = {}
@@ -31,8 +31,13 @@ class ContactController {
       /*  def contact = Contact.list()
         [contact: contact]*/
 
-        def contact = Contact.get(params.id)
+        /*def contact = Contact.get(params.id)
         [contact: contact]
+        */
+
+        def contacts = Contact.all
+        [contacts: contacts]
+
     }
 
     def list = {
