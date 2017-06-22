@@ -29,6 +29,8 @@
 
 
 
+
+
 <div class="container">
     <div class="panel panel-default">
 
@@ -70,7 +72,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Phone Number</label>
             <div class="col-sm-10">
-                <g:textField name="phoneNumber" maxlength="13" type="number"  placeholder="+639xxxxxxxx"/>
+                <g:textField name="phoneNumber" type="number"  placeholder="+639XXXXXXXXX"/>
             </div>
         </div>
         <div class="form-group row">

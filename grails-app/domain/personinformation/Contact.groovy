@@ -11,7 +11,9 @@ class Contact {
     Integer phoneNumber
 
     static constraints = {
+        bday validator: {
+            if (bday > 2016) return ['Invalid birthdate']
+        }
 
-        phoneNumber nullable: false
     }
 }

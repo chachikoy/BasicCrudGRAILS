@@ -61,8 +61,7 @@
                 <td>${contact.bday}</td>
                 <td>${contact.email}</td>
                 <td>${contact.phoneNumber}</td>
-                <td> <g:link action="edit" id="${contact.id}"
-                             class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span> </g:link>
+                <td> <g:link action="edit" id="${contact.id}" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span> </g:link>
                 <g:link action="delete" id="${contact.id}"
                         class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></span></g:link>
                 </td>
