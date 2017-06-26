@@ -4,64 +4,105 @@
     <meta charset="utf-8">
     %{--<meta name="viewport" content="width=device-width, initial-scale=1">--}%
     <meta name="viewport" content="contact">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:javascript src="bootstrap.js"/>
+
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/contact/show">View</a></li>
-            <li><a href="/contact/create">Create</a></li>
-            <li><a href="/contact/list">Update/Delete</a></li>
-
-        </ul>
-    </div>
-</nav>
-
-
 <div class="container">
-    <h2>List of Contacts</h2>
+    <div class="row">
+        <h2>Personal Information</h2>
+    </div>
+    <div class="row">
+        <fieldset class="for-panel">
+            <legend>Initial Information</legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-5 control-label">Name:</label>
+                        <p class="form-control-static">${contact.fname} ${contact.mname} ${contact.lname} ${contact.suffix}</p>
+                        <label class="col-xs-5 control-label">Gender: </label>
+                        <p class="form-control-static">${contact.gender}</p>
+                        <label class="col-xs-5 control-label">Nickname: </label>
+                        <p class="form-control-static">${contact.nickname}</p>
+                        <label class="col-xs-5 control-label">Civil Status: </label>
+                        <p class="form-control-static">${contact.cstatus}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-4 control-label">Birth Date: </label>
+                        <p class="form-control-static">${contact.bday}</p>
+                        <label class="col-xs-4 control-label">Birth Place: </label>
+                        <p class="form-control-static">${contact.bplace}</p>
+                        <label class="col-xs-4 control-label">Citizenship: </label>
+                        <p class="form-control-static">${contact.citizenship}</p>
 
-    <table class="table table-hover">
-        <thead>
-        <tr>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
 
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Gender</th>
-            <th>Birth Date</th>
-            <th>E-mail Address</th>
-            <th>Phone Number</th>
-
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${contacts}" var="contact">
-            <tr>
-                %{--can also use "it" if var is not indicated--}%
-
-                <td>${contact.fname}</td>
-                <td>${contact.mname}</td>
-                <td>${contact.lname}</td>
-                <td>${contact.gender}</td>
-                <td>${contact.bday}</td>
-                <td>${contact.email}</td>
-                <td>${contact.phoneNumber}</td>
-
-            </tr>
-        </g:each>
+    <div class="row">
+        <fieldset class="for-panel">
+            <legend>Contact Information</legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-5 control-label">Address:</label>
+                        <p class="form-control-static">${contact.address}</p>
+                        <label class="col-xs-5 control-label">Phone Number: </label>
+                        <p class="form-control-static">${contact.phoneNumber}</p>
+                        <label class="col-xs-5 control-label">Email Address: </label>
+                        <p class="form-control-static">${contact.email}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-4 control-label">Contact Person: </label>
+                        <p class="form-control-static">${contact.contactPerson}</p>
+                        <label class="col-xs-4 control-label">Contact Number: </label>
+                        <p class="form-control-static">${contact.contactNumber}</p>
 
 
-        </tbody>
-    </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="row">
+        <fieldset class="for-panel">
+            <legend>Family Background</legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-5 control-label">Spouse Name:</label>
+                        <p class="form-control-static">${contact.spouseName}</p>
+                        <label class="col-xs-5 control-label">Father Name: </label>
+                        <p class="form-control-static">${contact.fathersName}</p>
+                        <label class="col-xs-5 control-label">Mother Name: </label>
+                        <p class="form-control-static">${contact.mothersName}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-horizontal">
+                        <label class="col-xs-4 control-label">Spouse Birth Place: </label>
+                        <p class="form-control-static">${contact.spousebplace}</p>
+                        <label class="col-xs-4 control-label">Father's Birth Place: </label>
+                        <p class="form-control-static">${contact.spousebplace}</p>
+                        <label class="col-xs-4 control-label">Mother's Birth Place: </label>
+                        <p class="form-control-static">${contact.motherbplace}</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
 </div>
 
 </body>
